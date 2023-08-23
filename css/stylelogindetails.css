@@ -1,0 +1,232 @@
+/* Start Variables */
+:root {
+  --main-color: #816fdc;
+  --transparent-color: #7d68ea;
+  --section-padding: 100px;
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CentraNo2-Medium", "CentraNo2-Bold";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+
+/* start css */
+.f-title {
+  font-size: 33.7px;
+  color: black;
+  padding-top: 34px;
+  padding-bottom: 32.5px;
+  font-family: "CentraNo2-Bold";
+}
+
+.landing {
+  width: 100% !important;
+  height: 22vh;
+  border-radius: 15px;
+}
+
+.landing .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(125, 104, 234, 69%);
+  border-radius: 15px;
+}
+
+.bot {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-family: "CentraNo2-Extrabold";
+}
+.con .texxt h1 {
+  font-family: "CentraNo2-Bold";
+  font-size: 25px;
+}
+
+.con .texxt h3 {
+  font-size: 13.5px;
+  font-family: "CentraNo2-Book";
+}
+
+.con .texxt {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(5px);
+  gap: 12px;
+}
+
+.con {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 37.5px;
+  gap: 16.5px;
+}
+
+.ac-sec {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  margin-top: 42px;
+  margin-left: 4.5px;
+}
+
+.ac-sec .ac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+}
+
+.change {
+  font-size: 23px;
+}
+
+.ac-sec .ac-form .row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6.5px;
+  margin-bottom: 20.5px;
+}
+
+.ac-sec .ac-form .roww {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0 !important;
+}
+
+.ac-sec .ac-form .row .box input {
+  font-size: 11px;
+  font-family: "CentraNo2-Book";
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid rgba(112, 112, 112, 39%);
+  border-radius: 12px;
+}
+
+.ac-sec .ac-form .row1 .box {
+  width: 50%;
+}
+
+.ac-sec .ac-form .row .box input {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.ac-sec .ac-form .row .box label {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 51%);
+  padding: bottom 1.5px;
+}
+
+.ac-sec .ac-form .row2 .box {
+  display: flex;
+  flex-direction: column;
+  gap: 6.5px;
+  padding: 9.25px;
+  width: 100%;
+  border-bottom: 1px solid rgba(112, 112, 112, 39%);
+}
+
+.ac-sec .ac-form .button {
+  margin-top: 11px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 20.25px;
+}
+
+.ac-sec .ac-form .button button {
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #816fdc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: "CentraNo2-Medium";
+  cursor: pointer;
+}
+
+.ac-sec .ac-form .button .a {
+  font-size: 15px;
+  background-color: rgb(240, 244, 245);
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10.5px 18.5px;
+}
+
+.ac-sec .ac-form .button a {
+  color: #747272;
+  font-family: "CentraNo2-Medium";
+}
+
+.ac-sec .ac-form .row1 .box1 i {
+  transform: translate(275px, 28px);
+  color: black;
+  font-size: 13px;
+}

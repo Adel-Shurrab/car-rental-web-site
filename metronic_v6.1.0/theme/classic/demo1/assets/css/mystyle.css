@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: "CentraNo2-Book" !important;
+    src: url(../fonts/CentraNo2-Book.ttf) !important;
+  }
+  
+  @font-face {
+    font-family: "CentraNo2-Medium" !important;
+    src: url(../fonts/CentraNo2-Medium.ttf) !important;
+  }
+  
+  @font-face {
+    font-family: "CentraNo2-Bold" !important;
+    src: url(../fonts/CentraNo2-Bold.ttf) !important;
+  }
+  
+  @font-face {
+    font-family: "CentraNo2-Extrabold" !important;
+    src: url(../fonts/CentraNo2-Extrabold.ttf) !important;
+  }
+
+
+.add-btn {
+    width: 50% !important;
+}
+
+.i1{
+    width: 60px !important;
+}
+
+.hh{
+display: flex;
+}
+
+.hhh{
+    width: 100%;
+    align-items: end;
+    display: flex;
+}
+

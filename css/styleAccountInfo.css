@@ -1,0 +1,276 @@
+/* Start Variables */
+:root {
+  --main-color: #816fdc;
+  --transparent-color: #7d68ea;
+  --section-padding: 100px;
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CentraNo2-Medium", "CentraNo2-Bold";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+
+/* start css */
+.f-title {
+  font-size: 33.7px;
+  color: black;
+  padding-top: 34px;
+  padding-bottom: 32.5px;
+  font-family: "CentraNo2-Bold";
+}
+
+.landing {
+  width: 100% !important;
+  height: 22vh;
+  border-radius: 15px;
+}
+
+.landing .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(125, 104, 234, 69%);
+  border-radius: 15px;
+}
+
+.bot {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-family: "CentraNo2-Extrabold";
+}
+
+.con .texxt h1 {
+  font-family: "CentraNo2-Bold";
+  font-size: 25px;
+}
+
+.con .texxt h3 {
+  font-size: 13.5px;
+  font-family: "CentraNo2-Book";
+}
+
+.con .texxt {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(5px);
+  gap: 10px;
+}
+
+.con {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 37.5px;
+  gap: 16.5px;
+}
+
+.ac-sec {
+  width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-top: 29px;
+    margin-left: 3.5px;
+}
+
+.ac-sec .ac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13.5px;
+}
+
+.ac-sec .ac-form .row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 41.5px;
+  margin-bottom: 20.5px;
+}
+
+.ac-sec .ac-form .row1 .box input {
+  padding: 11px;
+  border: 1px solid rgba(112, 112, 112, 39%) !important;
+  border-radius: 6.5px;
+  font-family: "CentraNo2-Book";
+  font-size: 14px !important;
+}
+
+.ac-sec .ac-form .data {
+  display: flex;
+  flex-direction: column;
+  gap: 33.7px;
+}
+
+.ac-sec .ac-form .data .row label {
+  font-family: "CentraNo2-Medium";
+}
+
+.ac-sec .ac-form .data .row input {
+  font-family: "CentraNo2-Medium";
+}
+
+.inner2 input:focus {
+  border: 2px solid transparent;
+}
+
+.row2 input:focus {
+  outline: none !important ; /* Change the border color when focused */
+}
+
+.ac-sec .ac-form .row .box input {
+  border: none;
+  font-size: 15px;
+  width: 100%;
+}
+
+.ac-sec .ac-form .row .box input:focus {
+  border: none !important;
+}
+
+.ac-sec .ac-form .row .box label {
+  font-size: 15px;
+  color: rgb(155 155 155);
+  padding: bottom 3px;
+}
+
+.ac-sec .ac-form .row2 .box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+  padding: 2.5px;
+  width: 100%;
+  border-bottom: 1px solid rgba(112, 112, 112, 39%);
+}
+
+.fa-calendar-days {
+  font-size: 17px;
+}
+
+.ac-sec .ac-form .button {
+  margin-top: 11px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 20.25px;
+}
+
+.ac-sec .ac-form .button button {
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #816fdc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: "CentraNo2-Medium";
+  cursor: pointer;
+}
+
+.ac-sec .ac-form .button .a {
+  font-size: 15px;
+  background-color: rgb(240, 244, 245);
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10.5px 18.5px;
+}
+
+.ac-sec .ac-form .button a {
+  color: #747272;
+  font-family: "CentraNo2-Medium";
+}
+
+.y {
+  /* padding-top: 10% ;
+  padding-bottom: 10% ; */
+  display: flex !important ;
+  /* justify-content: space-around ;
+  align-items: center ; */
+  gap: 20px !important;
+}
+
+.x {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 7px !important;
+  align-items: center !important;
+  padding-left: 10px !important;
+  padding-top: 15px !important;
+}
+
+.inner2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ac-sec .row1 .box {
+  width: 46%;
+}
+
+.text-danger {
+  font-size: 12px;
+  transform: translateY(-18px);
+  width: 67%;
+  color: #dc3545 !important;
+  margin-top: 20px;
+}

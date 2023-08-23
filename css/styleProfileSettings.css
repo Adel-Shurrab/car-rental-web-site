@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #000;
+}
+.container .title {
+  margin-top: 25px;
+}
+.container .title h6 {
+  font-size: 35px;
+  font-family: "CentraNo2-Bold";
+  margin-bottom: 20px;
+}
+.container .info {
+  width: 100%;
+  height: 450px;
+  background-image: url(../images/registration/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 35px;
+  margin-bottom: 60px;
+}
+.container .info .insinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(125, 104, 234, 0.82);
+  display: flex;
+  border-radius: 35px;
+  padding: 60px 80px;
+  justify-content: space-between;
+}
+.container .info .insinfo .box1 img {
+  height: 180px;
+  width: 180px;
+  border-radius: 9%;
+  margin-bottom: 30px;
+}
+.container .info .insinfo .box1 h4 {
+  font-family: "CentraNo2-Bold";
+  font-size: 45px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.container .info .insinfo .box1 p {
+  font-family: "CentraNo2-Book";
+  font-size: 21px;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.options .box {
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  transition: all 200ms;
+}
+
+.options .box:hover {
+  box-shadow: 1px 1px 8px 1px #dadada;
+  transform: translateY(10px);
+  transform: scale(1.1);
+}
+
+.options .box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4f5;
+  padding: 20px;
+  border-radius: 15px;
+}
+.options .box .icon i {
+  color: #8c929a;
+  font-size: 25px;
+}
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.list .search2 {
+  display: flex;
+  justify-content: space-between;
+}
+.list .search2 .psec {
+  margin-top: 27px;
+  font-size: 35px;
+  font-family: "CentraNo2-Bold";
+}
+.list .search2 .sel {
+  position: relative;
+}
+.list .search2 .sel p {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  font-family: "CentraNo2-Medium";
+  background: #fff;
+}
+.list .search2 .sel select {
+  padding: 10px 10px;
+  height: 50px;
+  font-family: "CentraNo2-bold";
+  font-size: 15px;
+}
+.car2 {
+  height: 170px;
+  border: 1px solid #707070;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 25px;
+}
+.car2 .imgCar {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+.car2 .imgCar img {
+  width: 200px;
+}
+.car2 .box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 120px;
+}
+.car2 .box .details {
+  display: flex;
+  gap: 40px;
+}
+.car2 .box .details a {
+  color: #000;
+}
+.car2 .box .details .pass {
+  display: flex;
+  gap: 10px;
+}
+.car2 .done {
+  width: 12%;
+  margin-top: 40px;
+  margin-left: 150px;
+}
+.car2 .done .price {
+  display: flex;
+  gap: 5px;
+}
+.car2 .done .price h6 {
+  font-size: 19px;
+  font-family: "CentraNo2-Bold";
+}
+.car2 .done .price p {
+  font-size: 15px;
+  font-family: "CentraNo2-Medium";
+  margin-top: 5px;
+}
+.car2 .done .details {
+  background-color: #816fdc;
+  padding: 10px;
+  width: 100px;
+  margin-right: 110px;
+  border: none;
+  color: #fff;
+  font-family: "CentraNo2-Medium";
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.car3 {
+  margin-top: 40px;
+}
+.car3 .booktitle {
+  color: #ee715d;
+  font-size: 30px;
+  font-family: "CentraNo2-Bold";
+}
+.disable {
+  background-color: #7e76a9 !important;
+  color: #bababa !important;
+  cursor: default !important;
+}
+
+/* Modal styles */
+.container .info .insinfo .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .info .insinfo .modal .modal-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.nav-profile-pic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.modal-backdrop {
+  z-index: 0 !important;
+}

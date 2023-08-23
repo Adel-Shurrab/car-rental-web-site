@@ -1,0 +1,805 @@
+/* Start Variables */
+:root {
+  --main-color: #816fdc;
+  --transparent-color: #7d68ea;
+  --section-padding: 100px;
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CentraNo2-Medium", "CentraNo2-Bold";
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  margin: 50px 40px;
+  display: block;
+  color: black;
+  font-size: 18px;
+  font-family: "CentraNo2-Bold";
+}
+
+header .register {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+header .register .reg-cont {
+  background-color: var(--main-color);
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+header .register .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+header .register .profile .profile_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+header .register .profile h5 {
+  color: #515151;
+  font-size: 14px;
+}
+
+/* End Header */
+/* Start Landing */
+.landing {
+  height: 82vh;
+  width: 90%;
+  margin: auto;
+  background-image: url("../images/registration/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  position: relative;
+}
+
+.landing .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(125, 104, 234, 69%);
+  border-radius: 30px;
+}
+
+.landing .text {
+  position: absolute;
+  left: 10%;
+  top: 36%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.landing .text .content .land-title {
+  font-size: 45px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: "CentraNo2-Extrabold";
+}
+
+.landing .text .content .land-title2 {
+  font-size: 45px;
+  line-height: 1;
+  font-family: "CentraNo2-Extrabold";
+}
+/* Start Search */
+.search {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  width: 40%;
+  height: 80px;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.search form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search form .make {
+  display: flex;
+  flex-direction: column;
+}
+
+.search form .make label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 40%);
+}
+
+.search form .make .custom-select {
+  position: relative;
+  width: 150px;
+}
+
+.search form .make .custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #edeaea;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow-y: scroll;
+  height: 257px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.search form .model {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.search form .model::before {
+  content: "";
+  height: 80px;
+  width: 0.5px;
+  background-color: rgba(0, 0, 0, 39%);
+  position: absolute;
+  left: -23px;
+  top: -10px;
+}
+
+.search form .model label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 40%);
+}
+
+.search form .model input {
+  border-color: #edeaea;
+  width: 170px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: "CentraNo2-Medium";
+  padding: 10px;
+}
+
+.search form button {
+  padding: 15px 17px;
+  border-radius: 9px;
+  border-color: transparent;
+  background-color: #816fdc;
+  color: white;
+  font-family: "CentraNo2-Bold";
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.search form button i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+/* End Search */
+/* End Landing */
+
+/* Start Category */
+.category {
+  padding: 100px 0;
+}
+
+.category .container h2 {
+  font-size: 32px;
+  font-family: "CentraNo2-Bold";
+  padding-bottom: 40px;
+}
+
+.category .container .cards .sedan {
+  background-image: url("../images/Main/sedan.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .sedan .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .sedan:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .sedan .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .sedan:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .sedan .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .suv {
+  background-image: url("../images/Main/suv.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .suv .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .suv:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .suv .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .suv:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .suv .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .luxury {
+  background-image: url("../images/Main/d.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .luxury .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .luxury:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .luxury .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .luxury:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .luxury .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*---------------------------------------*/
+.category .container .cards .sports {
+  background-image: url("../images/Main/sport.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .sports .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .sports:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .sports .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .sports:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .sports .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .vans {
+  background-image: url("../images/Main/van.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .vans .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .vans:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .vans .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .vans:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .vans .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .elec {
+  background-image: url("../images/Main/Electric.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .elec .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .elec:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .elec .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .elec:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .elec .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .truck {
+  background-image: url("../images/Main/truck.jpg");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .truck .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .truck:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .truck .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .truck:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .truck .cat-txt h5 {
+  font-size: 22px;
+  color: #fff;
+  font-family: "CentraNo2-Book";
+  transform: translateY(6px);
+}
+/*----------------------------*/
+.category .container .cards .convertible {
+  background-image: url("../images/Main/convertible.png");
+  height: 160px;
+  width: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.category .container .cards .convertible .overlay {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 67%);
+  transition: all 300ms;
+}
+
+.category .container .cards .convertible:hover > .overlay {
+  height: 100%;
+}
+
+.category .container .cards .convertible .cat-txt {
+  width: 109px;
+  margin: auto;
+  height: 61px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 62%);
+  line-height: 50px;
+  position: absolute;
+  bottom: 55px;
+  left: 93px;
+  border: 0.1px solid #fff;
+  display: none;
+  transition: all 1000ms;
+}
+
+.category .container .cards .convertible:hover > .cat-txt {
+  display: block;
+}
+
+.category .container .cards .convertible .cat-txt h5 {
+  font-size: 18px;
+  color: #fff;
+  font-family: "CentraNo2-Bold";
+  transform: translateY(4px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 450px 450px 1px;
+}
+
+.category .container a {
+  width: fit-content;
+}
+/* End Category */
+/* Start about us */
+.about-us {
+  padding-top: 35px;
+  padding-bottom: var(--section-padding);
+}
+
+.about-us .about-us-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-us .about-us-container .about-box {
+  width: 450px;
+  display: flex;
+  justify-content: start;
+}
+
+.about-us .about-box i {
+  color: var(--main-color);
+  font-size: 30px;
+  padding: 10px;
+}
+
+.about-us .main-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 73%);
+  margin-bottom: 60px;
+}
+
+.about-us .main-heading h2 {
+  font-size: 32px;
+  margin-bottom: 21px;
+  font-family: "CentraNo2-Bold";
+}
+
+.about-us .main-heading h2 span {
+  color: var(--main-color);
+  font-family: "CentraNo2-Bold";
+}
+
+.about-us .main-heading p {
+  width: 470px;
+  color: rgba(0, 0, 0, 73%);
+  font-family: "CentraNo2-Book";
+}
+
+.about-box .text {
+  margin-left: 22px;
+}
+
+.about-us .about-box h3 {
+  margin-bottom: 15px;
+  color: black;
+}
+.about-us .about-box p {
+  line-height: 1.3;
+  color: #777;
+  font-family: "CentraNo2-Book";
+}
+
+.about-us .about-box .squaree {
+  background-color: rgba(179, 167, 241, 57%);
+  padding: 5px;
+  height: 60px;
+  border-radius: 10px;
+}
+/* End about us */
+/* Start Footer */
+footer {
+  margin-top: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+footer span {
+  padding: 0 10px;
+  font-size: 14px;
+}
+/* End Footer */
+
+.nav-profile-pic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}

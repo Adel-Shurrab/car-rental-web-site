@@ -1,0 +1,191 @@
+/* Start Variables */
+:root {
+  --main-color: #816fdc;
+  --transparent-color: #7d68ea;
+  --section-padding: 100px;
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CentraNo2-Medium", "CentraNo2-Bold";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+  margin-bottom: 50px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  margin: 50px 40px;
+  display: block;
+  color: black;
+  font-size: 18px;
+  font-family: "CentraNo2-Bold";
+}
+
+header .register .reg-cont {
+  display: flex;
+  align-items: center;
+}
+
+header .register .reg-cont .square {
+  margin-right: 15px;
+  background-color: #f0f4f5;
+  border-radius: 5px;
+}
+
+header .register .reg-cont .square i {
+  color: #d7d7d7;
+  padding: 5px;
+  font-size: 25px;
+}
+
+header .register .reg-cont h5 {
+  color: #a7a7a7;
+  font-size: 18px;
+}
+/* End Header */
+
+/* Payment Form Styles */
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.payment-box {
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.payment-box h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 38px;
+}
+
+.payment-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-box .input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-box label {
+  font-family: "CentraNo2-Bold";
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.payment-box input[type="text"],
+.payment-box input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.payment-box input[type="text"]:focus,
+.payment-box input[type="number"]:focus {
+  outline: none;
+  border-color: #816fdc;
+}
+
+.payment-box button[type="submit"] {
+  background-color: #816fdc;
+  padding: 16px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "CentraNo2-Bold";
+}
+
+.payment-box button[type="submit"]:hover {
+  background-color: #6d59b0;
+}
+
+.payment-box input[readonly] {
+  background-color: #f2f2f2;
+  border: none;
+  font-weight: bold;
+}
+
+#final-cost {
+  font-size: 20px;
+}

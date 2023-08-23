@@ -1,0 +1,308 @@
+:root {
+  --main-color: #816fdc;
+  --transparent-color: #7d68ea;
+  --section-padding: 100px;
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CentraNo2-Medium", "CentraNo2-Bold";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  margin: 50px 40px;
+  display: block;
+  color: black;
+  font-size: 18px;
+  font-family: "CentraNo2-Bold";
+}
+
+header .register .reg-cont {
+  display: flex;
+  align-items: center;
+}
+
+header .register .reg-cont .square {
+  margin-right: 15px;
+  background-color: #f0f4f5;
+  border-radius: 5px;
+}
+
+header .register .reg-cont .square i {
+  color: #d7d7d7;
+  padding: 5px;
+  font-size: 25px;
+}
+
+header .register .reg-cont h5 {
+  color: #a7a7a7;
+  font-size: 18px;
+}
+/* End Header */
+
+.all_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Start left Section */
+.left {
+  height: 82vh;
+  width: 44%;
+  background-image: url("../images/registration/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  position: relative;
+}
+
+.left .overlay {
+  width: 100%;
+  height: 88%;
+  background-color: rgba(125, 104, 234, 69%);
+  border-radius: 30px 30px 0 0;
+}
+
+.left .left_content {
+  position: absolute;
+  left: 0;
+  top: 17%;
+  color: white;
+}
+
+.left .left_content .left_title {
+  position: relative;
+  left: 35px;
+  font-family: "CentraNo2-Bold";
+  font-size: 37px;
+  width: fit-content;
+}
+
+.left .sign_in_footer {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.left .sign_in_footer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 5, 87, 0.77);
+  border-radius: 0 0 30px 30px;
+}
+
+.left .sign_in_footer .content {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-56px);
+  align-items: center;
+  width: 99%;
+  padding: 0 25px;
+}
+
+.left .sign_in_footer .content a {
+  color: #fff;
+  padding: 10px;
+  background-color: #7d68ea;
+  border-radius: 12px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.left .sign_in_footer .content p {
+  color: #fff;
+}
+
+.father {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* End left Section */
+
+/* Right Section */
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 20px;
+}
+
+.right .right_title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.right .right_title h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.right .right_title p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-top: 17px;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right .input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.right .input-container input {
+  padding: 16px 20px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 371px;
+}
+
+.right .input-container .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 21px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 95px;
+  margin-bottom: 30px;
+}
+
+.right button[type="submit"] {
+  padding: 12px 106px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 21px;
+  font-family: "CentraNo2-Bold";
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right button[type="submit"]:hover {
+  background-color: var(--transparent-color);
+}
+
+.right .forgot {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.right .forgot a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Start Footer */
+footer {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+footer span {
+  padding: 0 10px;
+  font-size: 14px;
+}
+/* End Footer */
+
+.text-danger {
+  font-size: 12px;
+  transform: translateY(-18px);
+  width: 67%;
+  color: #dc3545 !important;
+}

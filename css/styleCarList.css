@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "CentraNo2-Extrabold";
+  src: url(../fonts/CentraNo2-Extrabold.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Book";
+  src: url(../fonts/CentraNo2-Book.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Medium";
+  src: url(../fonts/CentraNo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: "CentraNo2-Bold";
+  src: url(../fonts/CentraNo2-Bold.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.container {
+  padding: 0 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inside {
+  display: flex;
+}
+.container .filter {
+  width: 25%;
+  margin-top: 13px;
+}
+
+.container .filter .filllter button {
+  padding: 10px 7px;
+  border-radius: 9px;
+  border-color: transparent;
+  background-color: #816fdc;
+  color: white;
+  font-family: "CentraNo2-Bold";
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.done a {
+  padding: 11px 15px;
+  border-radius: 9px;
+  border-color: transparent;
+  background-color: #816fdc;
+  color: white;
+  font-family: "CentraNo2-Bold";
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.container .filter h5 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.container .filter .filllter .price h6 {
+  font-family: "CentraNo2-Medium";
+  font-size: 15px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.container .filter .filllter .price .range {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 18px;
+  align-items: center;
+}
+.container .filter .filllter .price .range input {
+  width: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+.container .filter .filllter .price .range p {
+  margin-top: 2px;
+  font-size: 25px;
+}
+.container .filter .filllter .passengers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .filter .filllter .passengers h6 {
+  font-family: "CentraNo2-Medium";
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .filter .filllter .passengers .seat {
+  display: flex;
+  gap: 20px;
+}
+.container .filter .filllter .passengers .seat p {
+  font-family: "CentraNo2-Book";
+}
+.container .filter .filllter .passengers .seat input {
+  width: 25px;
+}
+.container .filter .filllter .gear {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .filter .filllter .gear h6 {
+  font-family: "CentraNo2-Medium";
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .filter .filllter .gear .gear1 {
+  display: flex;
+  gap: 20px;
+}
+.container .filter .filllter .gear .gear1 p {
+  font-family: "CentraNo2-Book";
+}
+.container .filter .filllter .gear .gear1 input {
+  width: 25px;
+}
+.container .list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .right {
+  width: 75%;
+}
+.container .list .search2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .list .search2 .psec {
+  margin-top: 27px;
+  font-family: "CentraNo2-Book";
+}
+.container .list .search2 .sel {
+  position: relative;
+}
+.container .list .search2 .sel p {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  font-family: "CentraNo2-Medium";
+  background: #fff;
+}
+.container .list .search2 .sel select {
+  padding: 10px 10px;
+  height: 50px;
+  font-family: "CentraNo2-bold";
+  font-size: 15px;
+}
+.container .car2 {
+  height: 170px;
+  border: 1px solid #707070;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 25px;
+  width: 100%;
+}
+.container .car2 .imgCar {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+.container .car2 .imgCar img {
+  width: 200px;
+  border-radius: 10px;
+}
+.container .car2 .box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 27px;
+}
+.container .car2 .box .details {
+  display: flex;
+  gap: 40px;
+}
+.container .car2 .box .details a {
+  color: #000;
+}
+.container .car2 .box .details .pass {
+  display: flex;
+  gap: 10px;
+}
+.container .car2 .done {
+  width: 12%;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.container .car2 .done .price {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  width: 120px;
+}
+.container .car2 .done .price h6 {
+  font-size: 19px;
+  font-family: "CentraNo2-Bold";
+}
+.container .car2 .done .price p {
+  font-size: 15px;
+  font-family: "CentraNo2-Medium";
+  margin-top: 5px;
+}
+.container .car2 .done button {
+  background-color: #816fdc;
+  padding: 10px;
+  width: 100px;
+  margin-right: 110px;
+  border: none;
+  color: #fff;
+  font-family: "CentraNo2-Medium";
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
